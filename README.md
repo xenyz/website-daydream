@@ -1,5 +1,4 @@
-[Website Daydream](https://play.google.com/store/apps/details?id=uk.co.liamnewmarch.daydream)
-================
+# [Website Daydream](https://play.google.com/store/apps/details?id=uk.co.liamnewmarch.daydream)
 
 Increase the usefulness of your docked or charging Android with Website Daydream.
 
@@ -13,3 +12,8 @@ Here’s some things you could do with it:
 - Show what’s ‘now playing’ on your home media centre.
 
 [![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=uk.co.liamnewmarch.daydream)
+
+## About me
+
+I'm Liam Newmarch, a developer living in London, and I make apps in my spare time. If you'd like to support the development of Website Daydream or any of my other projects, please consider tipping me on 
+[Gittip ![Support me on Gittip](https://assets-gittipllc.netdna-ssl.com/13.0.0/logo.png)](https://www.gittip.com/liamnewmarch/)
