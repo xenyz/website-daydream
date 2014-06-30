@@ -19,13 +19,13 @@
 		<activity
 			android:name=".Preferences"
 			android:label="@string/app_settings"
-			android:theme="@android:style/Theme.Holo">
+			android:theme="@android:style/Theme.Material">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.PREFERENCE" />
 			</intent-filter>
 		</activity>
 	</application>
-	<uses-sdk android:minSdkVersion="17" />
+	<uses-sdk android:minSdkVersion="L" />
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
