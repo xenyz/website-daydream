@@ -1,5 +1,9 @@
 @import '../../bower_components/bootstrap-sass/lib/bootstrap';
 
 html {
-  text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+img {
+	zoom: 0.5;
 }
