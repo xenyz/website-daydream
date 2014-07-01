@@ -1,3 +1,5 @@
-@charset "utf-8";
+@import '../../bower_components/bootstrap-sass/lib/bootstrap';
 
-@import "../../bower_components/bootstrap-sass/dist/css/bootstrap.min.css";
+html {
+  text-rendering: optimizeLegibility;
+}

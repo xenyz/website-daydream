@@ -4,12 +4,14 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		concat: {
-			options: {
-				style: 'compressed'
-			},
+		sass: {
 			dist: {
-				'assets/css/min.css': 'assets/css/main.scss'
+				options: {
+					style: 'compressed'
+				},
+				files: {
+					'assets/css/min.css': 'assets/css/main.scss'
+				}
 			}
 		}
 
