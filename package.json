@@ -1,0 +1,26 @@
+{
+  "name": "website-daydream",
+  "version": "1.0.0",
+  "description": "Website Daydream GitHub Pages",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.7.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liamnewmarch/website-daydream"
+  },
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/liamnewmarch/website-daydream/issues"
+  },
+  "homepage": "https://github.com/liamnewmarch/website-daydream"
+}
