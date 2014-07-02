@@ -16,4 +16,5 @@ Here’s some things you could do with it:
 ## About me
 
 I'm Liam Newmarch, a developer living in London, and I make apps in my spare time. If you'd like to support the development of Website Daydream or any of my other projects, please consider tipping me on 
-[Gittip ![Support me on Gittip](https://assets-gittipllc.netdna-ssl.com/13.0.0/logo.png)](https://www.gittip.com/liamnewmarch/)
+
+[![Support via Gittip](https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png)](https://www.gittip.com/liamnewmarch/)
