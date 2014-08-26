@@ -24,3 +24,8 @@ proguard/
 
 # Website Daydream release key
 my-release-key.keystore
+
+# GitHub pages build files
+.sass-cache
+bower_components
+node_modules
