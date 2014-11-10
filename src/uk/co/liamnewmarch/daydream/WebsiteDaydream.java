@@ -23,7 +23,6 @@ public class WebsiteDaydream extends DreamService {
 	private String preferenceUrl;
 	private boolean preferenceRefresh;
 	private Integer preferenceInterval;
-	private Integer preferenceProtocol;
 
 	@Override
 	public void onAttachedToWindow() {
@@ -38,9 +37,8 @@ public class WebsiteDaydream extends DreamService {
 		preferenceUrl = sharedPreferences.getString("pref_key_url", "http://www.bbc.co.uk/news");
 		preferenceRefresh = sharedPreferences.getBoolean("pref_key_refresh", false);
 		preferenceInterval = Integer.parseInt(sharedPreferences.getString("pref_key_interval", "5"));
-		preferenceProtocol = Integer.parseInt(sharedPreferences.getString("pref_key_protocol", "0"));
 
-		if (preferenceProtocol == 0 && !preferenceUrl.matches("^[a-zA-Z\\-.]+:.*")) {
+		if (!preferenceUrl.matches("^[a-zA-Z/-.]+:")) {
 			preferenceUrl = "http://" + preferenceUrl;
 		}
 
