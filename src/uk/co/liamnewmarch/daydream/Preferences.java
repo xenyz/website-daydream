@@ -1,15 +1,11 @@
 package uk.co.liamnewmarch.daydream;
 
-import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceFragment;
-import android.os.Bundle;
-import android.util.Log;
 
-import android.content.Intent;
-import android.widget.Toast;
 
 public class Preferences extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
@@ -31,8 +27,8 @@ public class Preferences extends PreferenceActivity implements OnSharedPreferenc
 
 	@Override
 	public void onPause() {
-		super.onPause();    
-		getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);    
+		super.onPause();
+		getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
 	}
 
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {

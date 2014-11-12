@@ -1,16 +1,15 @@
 package uk.co.liamnewmarch.daydream;
 
-import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.service.dreams.DreamService;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebSettings;
-import android.webkit.WebViewClient;
-import android.webkit.WebChromeClient;
 import android.webkit.JsResult;
-
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 public class WebsiteDaydream extends DreamService {
@@ -38,27 +37,23 @@ public class WebsiteDaydream extends DreamService {
 		preferenceRefresh = sharedPreferences.getBoolean("pref_key_refresh", false);
 		preferenceInterval = Integer.parseInt(sharedPreferences.getString("pref_key_interval", "5"));
 
-		if (!preferenceUrl.matches("^[a-zA-Z/-.]+:")) {
-			preferenceUrl = "http://" + preferenceUrl;
-		}
-
 		setFullscreen(preferenceFullscreen);
 		setInteractive(preferenceInteractive);
 
 		webView.setSystemUiVisibility(
-			View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-			| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-			| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-			| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-			| View.SYSTEM_UI_FLAG_FULLSCREEN
-			| View.SYSTEM_UI_FLAG_IMMERSIVE);
-
-		webView.loadUrl(preferenceUrl);
+			View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+			View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+			View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+			View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+			View.SYSTEM_UI_FLAG_FULLSCREEN |
+			View.SYSTEM_UI_FLAG_IMMERSIVE
+		);
 
 		webSettings = webView.getSettings();
 		webSettings.setAppCacheEnabled(true);
 		webSettings.setDomStorageEnabled(true);
 		webSettings.setJavaScriptEnabled(true);
+		webSettings.setAllowFileAccess(true);
 		webSettings.setPluginState(WebSettings.PluginState.ON_DEMAND);
 		webSettings.setSavePassword(false);
 		webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
@@ -88,5 +83,7 @@ public class WebsiteDaydream extends DreamService {
 				return true;
 			}
 		});
+
+		webView.loadUrl(preferenceUrl);
 	}
 }
