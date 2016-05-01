@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory 
+		android:title="Address"
+		android:key="pref_key_address_settings">
+		<EditTextPreference
+			android:key="pref_key_url"
+			android:title="Address"
+			android:lines="5"
+			android:summary="The web address to load."
+			android:inputType="textNoSuggestions" 
+			android:defaultValue="http://www.google.com" />
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="Authentication"
+		android:key="pref_key_authentication_settings">
+		<EditTextPreference
+			android:key="pref_key_user"
+			android:title="User name"
+			android:lines="5"
+			android:summary="User name to use for authorization."
+			android:inputType="textNoSuggestions"
+			android:defaultValue="" />
+		<EditTextPreference
+			android:key="pref_key_password"
+			android:title="Password"
+			android:lines="5"
+			android:summary="User password to use for authorization."
+			android:inputType="textPassword"
+			android:defaultValue="" />
+	</PreferenceCategory>
+	<PreferenceCategory 
+		android:title="Interaction"
+		android:key="pref_key_interaction_settings">
+		<CheckBoxPreference
+			android:key="pref_key_fullscreen"
+			android:title="Fullscreen"
+			android:summaryOff="The system bar will be visible."
+			android:summaryOn="The daydream will fill the screen."
+			android:defaultValue="true" />
+		<CheckBoxPreference
+			android:key="pref_key_interactive"
+			android:title="Touchable"
+			android:summaryOff="Interaction will wake the device."
+			android:summaryOn="Interaction will navigate the page."
+			android:defaultValue="false" />
+	</PreferenceCategory>
+	<PreferenceCategory 
+		android:title="Refresh"
+		android:key="pref_key_refresh_settings">
+		<CheckBoxPreference
+			android:key="pref_key_refresh"
+			android:title="Refresh"
+			android:summaryOff="The page will not refresh."
+			android:summaryOn="The page will refresh after an interval."
+			android:defaultValue="false" />
+		<ListPreference
+			android:dependency="pref_key_refresh"
+			android:key="pref_key_interval"
+			android:title="Interval"
+			android:dialogTitle="Refresh Interval"
+			android:entries="@array/pref_interval_entries"
+			android:entryValues="@array/pref_interval_values"
+			android:defaultValue="5" />
+	</PreferenceCategory>
+</PreferenceScreen>

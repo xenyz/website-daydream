@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Website Daydream</string>
+    <string name="app_settings">Settings</string>
+    <string name="dreamservice_class_name">com.android.systemui.Somnambulator</string>
+    <string name="dreamservice_package_context">com.android.systemui</string>
+</resources>
