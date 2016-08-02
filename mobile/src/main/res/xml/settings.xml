@@ -30,7 +30,7 @@
 			android:defaultValue="" />
 	</PreferenceCategory>
 	<PreferenceCategory 
-		android:title="Interaction"
+		android:title="Display"
 		android:key="pref_key_interaction_settings">
 		<CheckBoxPreference
 			android:key="pref_key_fullscreen"
@@ -43,6 +43,18 @@
 			android:title="Touchable"
 			android:summaryOff="Interaction will wake the device."
 			android:summaryOn="Interaction will navigate the page."
+			android:defaultValue="false" />
+		<CheckBoxPreference
+			android:key="pref_key_overviewmode"
+			android:title="Overview Mode"
+			android:summaryOff="Overview mode off."
+			android:summaryOn="Overview mode on."
+			android:defaultValue="false" />
+		<CheckBoxPreference
+			android:key="pref_key_wideviewport"
+			android:title="Wide view port"
+			android:summaryOff="Display in normal view port."
+			android:summaryOn="Display in wide view port."
 			android:defaultValue="false" />
 	</PreferenceCategory>
 	<PreferenceCategory 

@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "uk.co.liamnewmarch.daydream"
-        minSdkVersion 22
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 6
         versionName "2.0"
